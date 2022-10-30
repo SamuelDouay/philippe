@@ -1,0 +1,30 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+    background: linear-gradient(195.86deg, rgba(23, 41, 59, 0.8) 15.06%, rgba(35, 22, 53, 0.8) 78.06%),
+                linear-gradient(147.78deg, rgba(66, 68, 87, 0.8) 1.17%, rgba(102, 63, 105, 0.8) 97.54%);
+}
+
+main {
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 100%;
+}
+
+#appContainer {
+    margin-top: 80px;
+}

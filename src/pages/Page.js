@@ -14,7 +14,7 @@ export class Page extends Component {
 	}
 
 	get pageTitle() {
-		return this.#pageTitle + ' | Un etre humain';
+		return this.#pageTitle + ' | Philippe Chevalier';
 	}
 
 	mount(element) {
