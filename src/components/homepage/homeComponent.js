@@ -1,8 +1,8 @@
 import { Component } from '../global';
+import { ProposComponent } from '../propos/proposComponent';
 
 export class HomeComponent extends Component {
 	constructor() {
-		super('div', { name: 'id', value: 'homePage' }, '<h1>HOME PAGE</h1>');
+		super('div', { name: 'id', value: 'homePage' }, new ProposComponent());
 	}
 }
-	
