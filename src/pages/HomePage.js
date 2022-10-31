@@ -1,16 +1,16 @@
-import { HomeComponent } from '../components/homepage';
+import { ProposComponent } from '../components/propos/proposComponent';
 import { Page } from './Page';
 
 export class HomePage extends Page {
 	constructor() {
-		super('HOME', 'home');
+		super('HOME', 'homePage');
 	}
 
 	mount(element) {
 		super.mount(element);
-		this.children = new HomeComponent();
+		this.children = [new ProposComponent()];
 		this.element.innerHTML = this.render();
-		this.children.initEvent();
+		this.children.map(e => e.initEvent());
 	}
 
 	unmount() {

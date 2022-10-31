@@ -2,15 +2,24 @@ import { Component, Div, P } from '../global';
 
 export class ProposComponent extends Component {
 	constructor() {
-		super('div', { name: 'id', value: 'a_propos_component' }, [
+		super('section', { name: 'id', value: 'a_propos_component' }, [
 			new Div({ name: 'id', value: 'presentation' }, [
 				new Div(
 					{ name: 'id', value: 'phrase_general' },
-					`Bonjour. </br> Je suis <span>Philippe Chevalier<span>,`
+					`Bonjour. </br> Je suis <span>Philippe Chevalier</span>,`
 				),
-				new Div(null, [
-					new Div({ name: 'id', value: 'image_information' }, 'telechargement'),
-					new Div({ name: 'id', value: 'telechargement' }, 'Curiculum Vitae '),
+				new Div({ name: 'id', value: 'cv_donwload' }, [
+					new Div(
+						{ name: 'id', value: 'image_information' },
+						new Component(
+							'img',
+							[
+								{ name: 'src', value: './images/download-solid.svg' },
+								{ name: 'alt', value: 'download' },
+							],
+							'Curiculum Vitae'
+						)
+					),
 				]),
 			]),
 			new Div(
@@ -28,7 +37,7 @@ export class ProposComponent extends Component {
 				new Component('img', [
 					{ name: 'src', value: './images/instagram.svg' },
 					{ name: 'alt', value: 'instagram' },
-				])
+				]),
 			]),
 		]);
 	}
