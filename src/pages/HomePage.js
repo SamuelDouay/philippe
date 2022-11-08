@@ -1,4 +1,4 @@
-import { ProposComponent } from '../components/propos/proposComponent';
+import { PresentationComponent } from '../components/presentation/presentationComponent';
 import { Page } from './Page';
 
 export class HomePage extends Page {
@@ -8,7 +8,7 @@ export class HomePage extends Page {
 
 	mount(element) {
 		super.mount(element);
-		this.children = [new ProposComponent()];
+		this.children = [new PresentationComponent()];
 		this.element.innerHTML = this.render();
 		this.children.map(e => e.initEvent());
 	}

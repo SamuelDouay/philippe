@@ -1,3 +1,4 @@
+import { Project } from './ressources';
 import Router from './Router';
 
 window.onload = () => window.scrollTo(0, 0);
@@ -15,6 +16,4 @@ handleEventLog();
 window.addEventListener('log', handleEventLog);
 
 
-fetch('./utils/donne.json')
-	.then(response => response.json())
-	.then(data => console.log(data));
+new Project().getAll().then(res => console.log(res));

@@ -1,8 +1,8 @@
 import { Component, Div, P } from '../global';
 
-export class ProposComponent extends Component {
+export class PresentationComponent extends Component {
 	constructor() {
-		super('section', { name: 'id', value: 'a_propos_component' }, [
+		super('section', { name: 'id', value: 'a_presentation_component' }, [
 			new Div({ name: 'id', value: 'presentation' }, [
 				new Div(
 					{ name: 'id', value: 'phrase_general' },
