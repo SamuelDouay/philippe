@@ -13,3 +13,8 @@ function handleEventLog(e = null) {}
 
 handleEventLog();
 window.addEventListener('log', handleEventLog);
+
+
+fetch('./utils/donne.json')
+	.then(response => response.json())
+	.then(data => console.log(data));
