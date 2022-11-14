@@ -1,9 +1,11 @@
-import { Project } from '../../ressources';
+import { Categorie, Project } from '../../ressources';
 import { Component, Div } from '../global';
+import { CategorieList } from './CategorieList';
 import { ImagesList } from './ImagesList';
 
 export class Portefolio extends Component {
 	projetRessources;
+	categorieRessources;
 
 	constructor() {
 		super('section', { name: 'id', value: 'portefolio_component' }, [
@@ -15,7 +17,7 @@ export class Portefolio extends Component {
 			new Div({ name: 'id', value: 'project_container' }, [
 				new Div({ name: 'id', value: 'recherche_container' }, [
 					new Component('input', { name: 'type', value: 'search' }),
-					new Div({ name: 'id', value: 'radio_button_container' }, [
+					/*new Div({ name: 'id', value: 'radio_button_container' }, [
 						new Div(null, [
 							new Component('input', [
 								{ name: 'type', value: 'checkbox' },
@@ -56,11 +58,12 @@ export class Portefolio extends Component {
 							]),
 							new Component('label', { name: 'for', value: 'video' }, 'Video'),
 						]),
-					]),
+					]),*/
 				]),
 			]),
 		]);
 		this.projetRessources = new Project();
+		this.categorieRessources = new Categorie();
 		this.handleQueryChange = this.handleQueryChange.bind(this);
 	}
 
@@ -69,6 +72,11 @@ export class Portefolio extends Component {
 			document.querySelector('#project_container').innerHTML =
 				document.querySelector('#project_container').innerHTML +
 				new ImagesList(rep).render();
+		});
+		this.categorieRessources.getAll().then(rep => {
+			document.querySelector('#recherche_container').innerHTML =
+				document.querySelector('#recherche_container').innerHTML +
+				new CategorieList(rep).render();
 		});
 	}
 
