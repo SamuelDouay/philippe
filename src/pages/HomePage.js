@@ -9,7 +9,10 @@ export class HomePage extends Page {
 
 	mount(element) {
 		super.mount(element);
-		this.children = [new PresentationComponent(), new Portefolio()];
+		this.children = [
+			new PresentationComponent(),
+			new Portefolio(),
+		];
 		this.element.innerHTML = this.render();
 		this.children.map(e => e.initEvent());
 	}

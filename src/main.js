@@ -1,4 +1,3 @@
-import { Project } from './ressources';
 import Router from './Router';
 
 window.onload = () => window.scrollTo(0, 0);
@@ -14,6 +13,3 @@ function handleEventLog(e = null) {}
 
 handleEventLog();
 window.addEventListener('log', handleEventLog);
-
-
-new Project().getAll().then(res => console.log(res));
