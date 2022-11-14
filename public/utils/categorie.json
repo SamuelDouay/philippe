@@ -1,0 +1,22 @@
+[
+    {
+        "id" : 1,
+        "name" : "graphisme",
+        "label": "Graphisme"
+    },
+    {
+        "id" : 2,
+        "name" : "illustration",
+        "label": "Illustration"
+    },
+    {
+        "id" : 3,
+        "name" : "ui_design",
+        "label": "UI Design"
+    },
+    {
+        "id" : 4,
+        "name" : "video",
+        "label": "Video"
+    }
+]

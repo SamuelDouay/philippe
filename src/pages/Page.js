@@ -5,7 +5,7 @@ export class Page extends Component {
 	#pageTitle;
 
 	constructor(pageTitle, className, children) {
-		super('section', { name: 'class', value: className }, children);
+		super('div', { name: 'id', value: className }, children);
 		this.#pageTitle = pageTitle;
 	}
 

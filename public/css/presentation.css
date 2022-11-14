@@ -1,0 +1,43 @@
+#a_presentation_component {
+    display: flex;
+    flex-direction: row;
+}
+
+#presentation {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#phrase_general {
+    color: white;
+    font-size: xx-large;
+    height: 20%;
+}
+
+#phrase_general span {
+    color: #FF0C63;
+}
+
+#cv_donwload {
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+}
+
+#image_imformation {
+    width: 5%;
+    height: 100%;
+}
+
+#image_information img {
+    width: 8%;
+    height: auto;
+    margin-right: 3%;
+}
+
+#logo_resaux {
+    width: 3%;
+}
